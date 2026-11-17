@@ -16,469 +16,93 @@
             --gray-bg: #f5f2eb;
             --border: #e2dcd0;
         }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Assistant', sans-serif;
-        }
-
-        body {
-            background-color: var(--light);
-            color: var(--dark);
-            line-height: 1.6;
-        }
-
-        .top-bar {
-            background-color: var(--dark);
-            color: var(--secondary);
-            padding: 4px 20px;
-            font-size: 0.9rem;
-            font-weight: 700;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid var(--secondary);
-        }
-
-        .promo-banner {
-            background: linear-gradient(90deg, #b8860b 0%, var(--secondary) 50%, #b8860b 100%);
-            color: var(--dark);
-            text-align: center;
-            padding: 6px 15px;
-            font-size: 1.05rem;
-            font-weight: 800;
-            letter-spacing: 0.3px;
-            border-bottom: 1px solid var(--primary);
-        }
-
-        header {
-            background: linear-gradient(135deg, var(--primary) 0%, #0d1e15 100%);
-            color: white;
-            padding: 10px 0 0 0;
-            text-align: center;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.25);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 0 15px;
-        }
-
-        .brand-row {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 8px;
-        }
-
-        .logo-img {
-            width: 72px;
-            height: 72px;
-            border-radius: 50%;
-            border: 2px solid var(--secondary);
-            object-fit: cover;
-            box-shadow: 0 0 10px rgba(212, 175, 55, 0.35);
-            background-color: var(--dark);
-        }
-
-        .brand-titles {
-            text-align: right;
-        }
-
-        h1 {
-            font-size: 1.65rem;
-            color: var(--secondary);
-            margin-bottom: 0;
-            line-height: 1.2;
-            letter-spacing: 0.5px;
-        }
-
-        .subtitle {
-            font-size: 0.95rem;
-            color: var(--gold-light);
-            margin-bottom: 0;
-        }
-
-        nav {
-            background-color: rgba(13, 30, 21, 0.96);
-            width: 100%;
-            padding: 7px 0;
-            border-top: 1px solid rgba(212, 175, 55, 0.3);
-        }
-
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 6px;
-            list-style: none;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            padding: 4px 11px;
-            border-radius: 16px;
-            transition: all 0.2s ease;
-            font-size: 0.92rem;
-            display: inline-block;
-        }
-
-        .nav-links a:hover {
-            background-color: var(--secondary);
-            color: var(--dark);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 25px auto;
-            padding: 0 20px;
-        }
-
-        section {
-            background: white;
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 35px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            border: 1px solid var(--border);
-            scroll-margin-top: 155px;
-        }
-
-        h2 {
-            color: var(--primary);
-            font-size: 1.7rem;
-            margin-bottom: 18px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid var(--secondary);
-            display: inline-block;
-        }
-
-        p, li {
-            font-size: 1.08rem;
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        ul {
-            padding-right: 25px;
-        }
-
-        .catalog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 25px;
-        }
-
-        .product-card {
-            background: var(--gray-bg);
-            border-radius: 10px;
-            overflow: hidden;
-            border: 1px solid var(--border);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-
-        .product-img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border-bottom: 1px solid var(--border);
-            background-color: #e9e4d9;
-        }
-
-        .product-info {
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        .product-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 8px;
-        }
-
-        .product-price {
-            font-size: 1.35rem;
-            font-weight: 800;
-            color: #b8860b;
-            margin-top: auto;
-        }
-
-        .designs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 25px;
-            margin-top: 25px;
-        }
-
-        .design-card {
-            background: var(--gray-bg);
-            border-radius: 10px;
-            overflow: hidden;
-            border: 1px solid var(--border);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .design-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .design-img {
-            width: 100%;
-            height: 240px;
-            object-fit: cover;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .design-info {
-            padding: 15px 20px;
-            text-align: center;
-        }
-
-        .design-title {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
-
-        .instructions-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .instruction-item {
-            background: var(--gray-bg);
-            padding: 15px;
-            border-radius: 8px;
-            border: 1px solid var(--border);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: 700;
-            color: var(--primary);
-        }
-
-        .instruction-btn {
-            background-color: var(--primary);
-            color: var(--secondary);
-            padding: 6px 12px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            border: 1px solid var(--secondary);
-            transition: opacity 0.2s;
-        }
-
-        .instruction-btn:hover {
-            opacity: 0.85;
-        }
-
-        .form-group {
-            margin-bottom: 18px;
-        }
-
-        label {
-            display: block;
-            font-weight: 700;
-            margin-bottom: 6px;
-            color: var(--primary);
-        }
-
-        input, select, textarea {
-            width: 100%;
-            padding: 11px;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            font-size: 1rem;
-            background-color: #faf9f6;
-        }
-
-        input:focus, select:focus, textarea:focus {
-            outline: none;
-            border-color: var(--secondary);
-            box-shadow: 0 0 5px rgba(212, 175, 55, 0.4);
-        }
-
-        .order-summary-box {
-            background: #fdf8eb;
-            border: 2px dashed var(--secondary);
-            padding: 16px 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
-
-        .notice-box {
-            background: #eaf4ed;
-            border-right: 4px solid #25d366;
-            padding: 12px 15px;
-            margin-bottom: 20px;
-            border-radius: 4px;
-            font-size: 1.02rem;
-            color: #1b3b2b;
-        }
-
-        .btn-container {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            flex: 1;
-            min-width: 200px;
-            padding: 13px;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.05rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: opacity 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            text-decoration: none;
-            text-align: center;
-        }
-
-        .btn-whatsapp {
-            background-color: #25d366;
-            color: white;
-        }
-
-        .btn-email {
-            background-color: var(--primary);
-            color: var(--secondary);
-            border: 1px solid var(--secondary);
-        }
-
-        .btn-pay {
-            background-color: #b8860b;
-            color: white;
-        }
-
-        .btn:hover {
-            opacity: 0.9;
-        }
-
-        .btn:disabled {
-            opacity: 0.6;
-            cursor: wait;
-        }
-
-        footer {
-            background-color: var(--dark);
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            border-top: 3px solid var(--secondary);
-        }
-
-        footer p {
-            color: #aaa;
-            margin-bottom: 5px;
-        }
-
-        .tlh {
-            color: var(--secondary);
-            font-weight: bold;
-            font-size: 1.15rem;
-            margin-top: 8px;
-        }
-
+        html { scroll-behavior: smooth; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Assistant', sans-serif; }
+        body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
+        .top-bar { background-color: var(--dark); color: var(--secondary); padding: 4px 20px; font-size: 0.9rem; font-weight: 700; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--secondary); }
+        .promo-banner { background: linear-gradient(90deg, #b8860b 0%, var(--secondary) 50%, #b8860b 100%); color: var(--dark); text-align: center; padding: 6px 15px; font-size: 1.05rem; font-weight: 800; letter-spacing: 0.3px; border-bottom: 1px solid var(--primary); }
+        header { background: linear-gradient(135deg, var(--primary) 0%, #0d1e15 100%); color: white; padding: 10px 0 0 0; text-align: center; box-shadow: 0 3px 10px rgba(0,0,0,0.25); position: sticky; top: 0; z-index: 1000; }
+        .header-container { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; padding: 0 15px; }
+        .brand-row { display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 8px; }
+        .logo-img { width: 72px; height: 72px; border-radius: 50%; border: 2px solid var(--secondary); object-fit: cover; box-shadow: 0 0 10px rgba(212, 175, 55, 0.35); background-color: var(--dark); }
+        .brand-titles { text-align: right; }
+        h1 { font-size: 1.65rem; color: var(--secondary); margin-bottom: 0; line-height: 1.2; letter-spacing: 0.5px; }
+        .subtitle { font-size: 0.95rem; color: var(--gold-light); margin-bottom: 0; }
+        nav { background-color: rgba(13, 30, 21, 0.96); width: 100%; padding: 7px 0; border-top: 1px solid rgba(212, 175, 55, 0.3); }
+        .nav-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px; list-style: none; max-width: 1200px; margin: 0 auto; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 600; padding: 4px 11px; border-radius: 16px; transition: all 0.2s ease; font-size: 0.92rem; display: inline-block; }
+        .nav-links a:hover { background-color: var(--secondary); color: var(--dark); }
+        .container { max-width: 1200px; margin: 25px auto; padding: 0 20px; }
+        section { background: white; border-radius: 12px; padding: 30px; margin-bottom: 35px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border: 1px solid var(--border); scroll-margin-top: 155px; }
+        h2 { color: var(--primary); font-size: 1.7rem; margin-bottom: 18px; padding-bottom: 8px; border-bottom: 2px solid var(--secondary); display: inline-block; }
+        p, li { font-size: 1.08rem; color: #333; margin-bottom: 10px; }
+        ul { padding-right: 25px; }
+        .catalog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; margin-top: 25px; }
+        .product-card { background: var(--gray-bg); border-radius: 10px; overflow: hidden; border: 1px solid var(--border); transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; }
+        .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .product-img { width: 100%; height: 220px; object-fit: cover; border-bottom: 1px solid var(--border); background-color: #e9e4d9; }
+        .product-info { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
+        .product-title { font-size: 1.25rem; font-weight: 700; color: var(--primary); margin-bottom: 8px; }
+        .product-price { font-size: 1.35rem; font-weight: 800; color: #b8860b; margin-top: auto; }
+        .designs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; margin-top: 25px; }
+        .design-card { background: var(--gray-bg); border-radius: 10px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease; }
+        .design-card:hover { transform: translateY(-5px); }
+        .design-img { width: 100%; height: 240px; object-fit: cover; border-bottom: 1px solid var(--border); }
+        .design-info { padding: 15px 20px; text-align: center; }
+        .design-title { font-size: 1.2rem; font-weight: 700; color: var(--primary); }
+        .instructions-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 15px; margin-top: 20px; }
+        .instruction-item { background: var(--gray-bg); padding: 15px; border-radius: 8px; border: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; font-weight: 700; color: var(--primary); }
+        .instruction-btn { background-color: var(--primary); color: var(--secondary); padding: 6px 12px; border-radius: 6px; text-decoration: none; font-size: 0.9rem; border: 1px solid var(--secondary); transition: opacity 0.2s; }
+        .instruction-btn:hover { opacity: 0.85; }
+        .form-group { margin-bottom: 18px; }
+        label { display: block; font-weight: 700; margin-bottom: 6px; color: var(--primary); }
+        input, select, textarea { width: 100%; padding: 11px; border: 1px solid var(--border); border-radius: 8px; font-size: 1rem; background-color: #faf9f6; }
+        input:focus, select:focus, textarea:focus { outline: none; border-color: var(--secondary); box-shadow: 0 0 5px rgba(212, 175, 55, 0.4); }
+        .order-summary-box { background: #fdf8eb; border: 2px dashed var(--secondary); padding: 16px 20px; border-radius: 8px; margin-bottom: 20px; font-size: 1.15rem; font-weight: 700; color: var(--primary); }
+        .notice-box { background: #eaf4ed; border-right: 4px solid #25d366; padding: 12px 15px; margin-bottom: 20px; border-radius: 4px; font-size: 1.02rem; color: #1b3b2b; }
+        .btn-container { display: flex; gap: 15px; margin-top: 20px; flex-wrap: wrap; }
+        .btn { flex: 1; min-width: 200px; padding: 13px; border: none; border-radius: 8px; font-size: 1.05rem; font-weight: 700; cursor: pointer; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; text-align: center; }
+        .btn-whatsapp { background-color: #25d366; color: white; }
+        .btn-email { background-color: var(--primary); color: var(--secondary); border: 1px solid var(--secondary); }
+        .btn-pay { background-color: #b8860b; color: white; }
+        .btn:hover { opacity: 0.9; }
+        .btn:disabled { opacity: 0.6; cursor: wait; }
+        footer { background-color: var(--dark); color: white; text-align: center; padding: 20px; margin-top: 40px; border-top: 3px solid var(--secondary); }
+        footer p { color: #aaa; margin-bottom: 5px; }
+        .tlh { color: var(--secondary); font-weight: bold; font-size: 1.15rem; margin-top: 8px; }
         @media (max-width: 768px) {
-            section {
-                scroll-margin-top: 230px;
-                padding: 20px;
-            }
-            .brand-row {
-                flex-direction: column;
-                gap: 6px;
-            }
-            .brand-titles {
-                text-align: center;
-            }
-            .logo-img {
-                width: 60px;
-                height: 60px;
-            }
-            h1 {
-                font-size: 1.4rem;
-            }
-            .promo-banner {
-                font-size: 0.95rem;
-                padding: 5px 10px;
-            }
-            .nav-links {
-                gap: 4px;
-            }
-            .nav-links a {
-                font-size: 0.85rem;
-                padding: 3px 8px;
-            }
-            .btn-container {
-                flex-direction: column;
-            }
+            section { scroll-margin-top: 230px; padding: 20px; }
+            .brand-row { flex-direction: column; gap: 6px; }
+            .brand-titles { text-align: center; }
+            .logo-img { width: 60px; height: 60px; }
+            h1 { font-size: 1.4rem; }
+            .promo-banner { font-size: 0.95rem; padding: 5px 10px; }
+            .nav-links { gap: 4px; }
+            .nav-links a { font-size: 0.85rem; padding: 3px 8px; }
+            .btn-container { flex-direction: column; }
         }
     </style>
 </head>
 <body>
 
     <div class="top-bar">
-        <span>המרכז לחוגי נגרות</span>
+        <span id="topBarTitle">המרכז לחוגי נגרות</span>
         <span>בס"ד</span>
     </div>
 
-    <div class="promo-banner">
+    <div class="promo-banner" id="promoBannerText">
         ✨ חדש! קטלוג תשפ"ז — בקרוב דגמים חדשים ומיוחדים נוספים! ✨
     </div>
 
     <header>
         <div class="header-container">
             <div class="brand-row">
-                <img src="logo.jpeg" alt="המרכז לחוגי נגרות - לוגו" class="logo-img" onerror="tryImageFormats(this, 'logo')">
+                <img src="logo.jpeg" alt="המרכז לחוגי נגרות - לוגו" class="logo-img" id="siteLogo" onerror="tryImageFormats(this, 'logo')">
                 <div class="brand-titles">
-                    <h1>המרכז לחוגי נגרות</h1>
-                    <p class="subtitle">ערכות בנייה יצירה ועיצוב מעץ</p>
+                    <h1 id="mainTitle">המרכז לחוגי נגרות</h1>
+                    <p class="subtitle" id="subTitle">ערכות בנייה יצירה ועיצוב מעץ</p>
                 </div>
             </div>
-            
             <nav>
                 <ul class="nav-links">
                     <li><a href="#about">אודות</a></li>
@@ -496,11 +120,10 @@
     </header>
 
     <div class="container">
-
         <section id="about">
             <h2>אודות החברה</h2>
-            <p>חברה המפעילה מגוון חוגי נגרות לחינוך רגיל ומיוחד החל מגיל הרך עד בוגרים וסדנאות לכל גיל משנת 2021 במתנסים, מוסדות חינוך, חינוך מיוחד ועוד.</p>
-            <p>החברה מתמחה בציוד מקצועי וצוות בעל ניסיון, ידע ומקצועיות לביצוע תוצרים מעץ בעיצוב אישי מגוון ולחווית הצלחה מעצימה.</p>
+            <p id="aboutP1">חברה המפעילה מגוון חוגי נגרות לחינוך רגיל ומיוחד החל מגיל הרך עד בוגרים וסדנאות לכל גיל משנת 2021 במתנסים, מוסדות חינוך, חינוך מיוחד ועוד.</p>
+            <p id="aboutP2">החברה מתמחה בציוד מקצועי וצוות בעל ניסיון, ידע ומקצועיות לביצוע תוצרים מעץ בעיצוב אישי מגוון ולחווית הצלחה מעצימה.</p>
         </section>
 
         <section id="rules">
@@ -510,7 +133,7 @@
                 <li><strong>שינויים בתוצרים:</strong> יתכנו שינויים קלים בתוצרים ובמידות בהתאם לחומרי הגלם.</li>
                 <li><strong>תמונות להמחשה:</strong> כל התמונות המופיעות באתר הינן להמחשה בלבד.</li>
                 <li><strong>מוצר גלם:</strong> כל מוצר הינו מוצר גלם עשוי עץ לעבודה יצירתית ואינו משחק ילדים פסיבי.</li>
-                <li><strong>משלוחים:</strong> אספקת המוצרים והמשלוחים מתבצעים מגדרה עד חדרה בתוספת 39 ₪. זמן אספקה עד 14 ימי עסקים (בד"כ נשלח תוך שבוע).</li>
+                <li><strong>משלוחים:</strong> אספקת המוצרים והמשלוחים מתבצעים מגדרה עד חדרה בתוספת <span class="shipping-val">39</span> ₪. זמן אספקה עד 14 ימי עסקים (בד"כ נשלח תוך שבוע).</li>
                 <li><strong>ביטולים והחזרות:</strong> ניתן להחזיר מוצרים באריזתם המקורית תוך 14 יום בהתאם לחוק הגנת הצרכן.</li>
             </ul>
         </section>
@@ -521,7 +144,7 @@
                 <li><strong>איסוף מידע:</strong> האתר אוסף אך ורק פרטים הנמסרים מרצון על ידי המשתמשים בטפסי ההזמנה ויצירת הקשר (כגון שם מלא, טלפון, כתובת דוא"ל וכתובת למשלוח) לצורך טיפול בהזמנה, אספקתה ומתן שירות לקוחות.</li>
                 <li><strong>שמירה על סודיות:</strong> המרכז לחוגי נגרות מתחייב שלא להעביר, למכור או לשתף את פרטי הלקוחות עם צד ג' כלשהו, למעט חברות שילוח לצורך מסירת ההזמנה בפועל.</li>
                 <li><strong>סליקה מאובטחת:</strong> פרטי כרטיסי האשראי אינם נשמרים במאגרי האתר. הסליקה מתבצעת באופן חיצוני ומאובטח דרך מערכת התשלומים המורשית Invoice4u העומדת בתקני אבטחה מחמירים (PCI-DSS).</li>
-                <li><strong>פנייה בנושא פרטיות:</strong> בכל שאלה או בקשה לעדכון ומחיקת פרטים, ניתן לפנות אלינו בדוא"ל netanelsport@gmail.com או בטלפון 053-5252789.</li>
+                <li><strong>פנייה בנושא פרטיות:</strong> בכל שאלה או בקשה לעדכון ומחיקת פרטים, ניתן לפנות אלינו בדוא"ל <span class="email-val">netanelsport@gmail.com</span> או בטלפון <span class="phone-val">053-5252789</span>.</li>
             </ul>
         </section>
 
@@ -529,224 +152,16 @@
             <h2>קטלוג והזמנה מהירה</h2>
             <p>בחר את המוצרים הרצויים מתוך הקטלוג. <strong>שים לב: מינימום הזמנה הוא 10 יחידות ממוצר.</strong></p>
 
-            <div class="catalog-grid">
-                <!-- דגם 1 -->
-                <div class="product-card">
-                    <img src="model1.jfif" alt="דגם 1" class="product-img" onerror="tryImageFormats(this, 'model1')">
-                    <div class="product-info">
-                        <div class="product-title">דגם 1: מעמד מדורג ארבע קומות</div>
-                        <div class="product-price">₪26</div>
-                    </div>
-                </div>
-
-                <!-- דגם 2 -->
-                <div class="product-card">
-                    <img src="model2.jpeg" alt="דגם 2" class="product-img" onerror="tryImageFormats(this, 'model2')">
-                    <div class="product-info">
-                        <div class="product-title">דגם 2: ארגונית כלי כתיבה עם חלוקה</div>
-                        <div class="product-price">₪16</div>
-                    </div>
-                </div>
-
-                <!-- דגם 3 -->
-                <div class="product-card">
-                    <img src="model3.jpg" alt="דגם 3" class="product-img" onerror="tryImageFormats(this, 'model3')">
-                    <div class="product-info">
-                        <div class="product-title">דגם 3: מעמד מדורג / שלטים</div>
-                        <div class="product-price">₪26</div>
-                    </div>
-                </div>
-
-                <!-- דגם 4 -->
-                <div class="product-card">
-                    <img src="model4.jpg" alt="דגם 4" class="product-img" onerror="tryImageFormats(this, 'model4')">
-                    <div class="product-info">
-                        <div class="product-title">דגם 4: ארגז כלים קטן</div>
-                        <div class="product-price">₪28</div>
-                    </div>
-                </div>
-
-                <!-- דגם 5 -->
-                <div class="product-card">
-                    <img src="model5.jfif" alt="דגם 5" class="product-img" onerror="tryImageFormats(this, 'model5')">
-                    <div class="product-info">
-                        <div class="product-title">דגם 5: בית עציץ מוב</div>
-                        <div class="product-price">₪26</div>
-                    </div>
-                </div>
-
-                <!-- דגם 6 -->
-                <div class="product-card">
-                    <img src="model6.jfif" alt="דגם 6" class="product-img" onerror="tryImageFormats(this, 'model6')">
-                    <div class="product-info">
-                        <div class="product-title">דגם 6: מעמד משולש לספר</div>
-                        <div class="product-price">₪28</div>
-                    </div>
-                </div>
-
-                <!-- דגם 7 -->
-                <div class="product-card">
-                    <img src="model7.jfif" alt="דגם 7" class="product-img" onerror="tryImageFormats(this, 'model7')">
-                    <div class="product-info">
-                        <div class="product-title">דגם 7: מדף תלייה קטן</div>
-                        <div class="product-price">₪26</div>
-                    </div>
-                </div>
-
-                <!-- דגם 8 -->
-                <div class="product-card">
-                    <img src="model8.jpg" alt="דגם 8" class="product-img" onerror="tryImageFormats(this, 'model8')">
-                    <div class="product-info">
-                        <div class="product-title">דגם 8: קופסת אוצר (מכסה רגיל)</div>
-                        <div class="product-price">₪26</div>
-                    </div>
-                </div>
-
-                <!-- דגם 9 -->
-                <div class="product-card">
-                    <img src="model9.jpg" alt="דגם 9" class="product-img" onerror="tryImageFormats(this, 'model9')">
-                    <div class="product-info">
-                        <div class="product-title">דגם 9: מתקן לדפים ועטים</div>
-                        <div class="product-price">₪16</div>
-                    </div>
-                </div>
-
-                <!-- דגם 10 -->
-                <div class="product-card">
-                    <img src="model10.jpg" alt="דגם 10" class="product-img" onerror="tryImageFormats(this, 'model10')">
-                    <div class="product-info">
-                        <div class="product-title">דגם 10: מעמד לטאבלט משודרג</div>
-                        <div class="product-price">₪22</div>
-                    </div>
-                </div>
-
-                <!-- דגם 12 -->
-                <div class="product-card">
-                    <img src="model12.jpg" alt="דגם 12" class="product-img" onerror="tryImageFormats(this, 'model12')">
-                    <div class="product-info">
-                        <div class="product-title">דגם 12: סל ניירות שולחני</div>
-                        <div class="product-price">₪26</div>
-                    </div>
-                </div>
-
-                <!-- דגם 14 -->
-                <div class="product-card">
-                    <img src="model14.jpg" alt="דגם 14" class="product-img" onerror="tryImageFormats(this, 'model14')">
-                    <div class="product-info">
-                        <div class="product-title">דגם 14: מתקן לתבלינים</div>
-                        <div class="product-price">₪26</div>
-                    </div>
-                </div>
-
-                <!-- דגם 16 -->
-                <div class="product-card">
-                    <img src="model16.jpg" alt="דגם 16" class="product-img" onerror="tryImageFormats(this, 'model16')">
-                    <div class="product-info">
-                        <div class="product-title">דגם 16: מגש עץ בסיסי</div>
-                        <div class="product-price">₪28</div>
-                    </div>
-                </div>
-
-                <!-- דגם 19 -->
-                <div class="product-card">
-                    <img src="model19.jpg" alt="דגם 19" class="product-img" onerror="tryImageFormats(this, 'model19')">
-                    <div class="product-info">
-                        <div class="product-title">דגם 19: מעמד לתחתיות כוסות</div>
-                        <div class="product-price">₪18</div>
-                    </div>
-                </div>
-
-                <!-- דגם 20 -->
-                <div class="product-card">
-                    <img src="model20.jpeg" alt="דגם 20" class="product-img" onerror="tryImageFormats(this, 'model20')">
-                    <div class="product-info">
-                        <div class="product-title">דגם 20: מדף פיני ישר</div>
-                        <div class="product-price">₪26</div>
-                    </div>
-                </div>
-
-                <!-- דגם 22 -->
-                <div class="product-card">
-                    <img src="model22.jfif" alt="דגם 22" class="product-img" onerror="tryImageFormats(this, 'model22')">
-                    <div class="product-info">
-                        <div class="product-title">דגם 22: תחתית מובעת לסיר חם</div>
-                        <div class="product-price">₪16</div>
-                    </div>
-                </div>
-
-                <!-- דגם 23 -->
-                <div class="product-card">
-                    <img src="model23.jfif" alt="דגם 23" class="product-img" onerror="tryImageFormats(this, 'model23')">
-                    <div class="product-info">
-                        <div class="product-title">דגם 23: קופסת תה מחולקת (4 תאים)</div>
-                        <div class="product-price">₪28</div>
-                    </div>
-                </div>
-
-                <!-- דגם 25 -->
-                <div class="product-card">
-                    <img src="model25.jfif" alt="דגם 25" class="product-img" onerror="tryImageFormats(this, 'model25')">
-                    <div class="product-info">
-                        <div class="product-title">דגם 25: מעמד שולחני למצות</div>
-                        <div class="product-price">₪26</div>
-                    </div>
-                </div>
-
-                <!-- דגם 26 -->
-                <div class="product-card">
-                    <img src="model26.jfif" alt="דגם 26" class="product-img" onerror="tryImageFormats(this, 'model26')">
-                    <div class="product-info">
-                        <div class="product-title">דגם 26: שרפרף מיניאטורי</div>
-                        <div class="product-price">₪18</div>
-                    </div>
-                </div>
-
-                <!-- דגם 27 -->
-                <div class="product-card">
-                    <img src="model27.jfif" alt="דגם 27" class="product-img" onerror="tryImageFormats(this, 'model27')">
-                    <div class="product-info">
-                        <div class="product-title">דגם 27: מעמד קלסרים/תיקיות שולחני</div>
-                        <div class="product-price">₪26</div>
-                    </div>
-                </div>
-
-                <!-- דגם 28 -->
-                <div class="product-card">
-                    <img src="model28.jfif" alt="דגם 28" class="product-img" onerror="tryImageFormats(this, 'model28')">
-                    <div class="product-info">
-                        <div class="product-title">דגם 28: מתקן למפתחות ומכתבים</div>
-                        <div class="product-price">₪28</div>
-                    </div>
-                </div>
-
-                <!-- דגם 29 -->
-                <div class="product-card">
-                    <img src="model29.jpeg" alt="דגם 29" class="product-img" onerror="tryImageFormats(this, 'model29')">
-                    <div class="product-info">
-                        <div class="product-title">דגם 29: מתקן תצוגה לספר בישול</div>
-                        <div class="product-price">₪28</div>
-                    </div>
-                </div>
-
-                <!-- דגם 30 -->
-                <div class="product-card">
-                    <img src="model30.jpeg" alt="דגם 30" class="product-img" onerror="tryImageFormats(this, 'model30')">
-                    <div class="product-info">
-                        <div class="product-title">דגם 30: קופסת אחסון משחקים</div>
-                        <div class="product-price">₪26</div>
-                    </div>
-                </div>
-            </div>
+            <div class="catalog-grid" id="catalogGrid"></div>
 
             <hr style="margin: 40px 0; border: 0; border-top: 1px solid var(--border);">
 
             <h3 style="margin-bottom: 20px; color: var(--primary);">טופס הזמנה מהירה</h3>
             
             <div class="notice-box">
-                📦 <strong>פרטי משלוח ואספקה:</strong> משלוחים מגדרה עד חדרה בתוספת 39 ₪. זמן אספקה עד 14 ימי עסקים (בד"כ נשלח תוך שבוע). מינימום הזמנה ממוצר: 10 יחידות.
+                📦 <strong>פרטי משלוח ואספקה:</strong> משלוחים מגדרה עד חדרה בתוספת <span class="shipping-val">39</span> ₪. זמן אספקה עד 14 ימי עסקים (בד"כ נשלח תוך שבוע). מינימום הזמנה ממוצר: 10 יחידות.
             </div>
 
-            <!-- טופס הזמנה מחובר ל-Web3Forms וגם ל-Google Sheets -->
             <form action="https://api.web3forms.com/submit" method="POST" id="orderForm" onsubmit="return handleFormSubmit(event)">
                 <input type="hidden" name="access_key" value="3ac80b49-ea81-461d-809b-b159f01331ab">
                 <input type="hidden" name="subject" value="הזמנה חדשה מאתר המרכז לחוגי נגרות">
@@ -755,29 +170,6 @@
                     <label>בחר דגם לבחירה אוטומטית:</label>
                     <select name="selectedModel" id="selectedModel" required onchange="onModelSelect()">
                         <option value="" disabled selected>-- בחר דגם מהרשימה --</option>
-                        <option value="דגם 1 - מעמד מדורג ארבע קומות" data-price="26">דגם 1: מעמד מדורג ארבע קומות - ₪26</option>
-                        <option value="דגם 2 - ארגונית כלי כתיבה עם חלוקה" data-price="16">דגם 2: ארגונית כלי כתיבה עם חלוקה - ₪16</option>
-                        <option value="דגם 3 - מעמד מדורג / שלטים" data-price="26">דגם 3: מעמד מדורג / שלטים - ₪26</option>
-                        <option value="דגם 4 - ארגז כלים קטן" data-price="28">דגם 4: ארגז כלים קטן - ₪28</option>
-                        <option value="דגם 5 - בית עציץ מוב" data-price="26">דגם 5: בית עציץ מוב - ₪26</option>
-                        <option value="דגם 6 - מעמד משולש לספר" data-price="28">דגם 6: מעמד משולש לספר - ₪28</option>
-                        <option value="דגם 7 - מדף תלייה קטן" data-price="26">דגם 7: מדף תלייה קטן - ₪26</option>
-                        <option value="דגם 8 - קופסת אוצר" data-price="26">דגם 8: קופסת אוצר - ₪26</option>
-                        <option value="דגם 9 - מתקן לדפים ועטים" data-price="16">דגם 9: מתקן לדפים ועטים - ₪16</option>
-                        <option value="דגם 10 - מעמד לטאבלט משודרג" data-price="22">דגם 10: מעמד לטאבלט משודרג - ₪22</option>
-                        <option value="דגם 12 - סל ניירות שולחני" data-price="26">דגם 12: סל ניירות שולחני - ₪26</option>
-                        <option value="דגם 14 - מתקן לתבלינים" data-price="26">דגם 14: מתקן לתבלינים - ₪26</option>
-                        <option value="דגם 16 - מגש עץ בסיסי" data-price="28">דגם 16: מגש עץ בסיסי - ₪28</option>
-                        <option value="דגם 19 - מעמד לתחתיות כוסות" data-price="18">דגם 19: מעמד לתחתיות כוסות - ₪18</option>
-                        <option value="דגם 20 - מדף פיני ישר" data-price="26">דגם 20: מדף פיני ישר - ₪26</option>
-                        <option value="דגם 22 - תחתית מובעת לסיר חם" data-price="16">דגם 22: תחתית מובעת לסיר חם - ₪16</option>
-                        <option value="דגם 23 - קופסת תה מחולקת" data-price="28">דגם 23: קופסת תה מחולקת (4 תאים) - ₪28</option>
-                        <option value="דגם 25 - מעמד שולחני למצות" data-price="26">דגם 25: מעמד שולחני למצות - ₪26</option>
-                        <option value="דגם 26 - שרפרף מיניאטורי" data-price="18">דגם 26: שרפרף מיניאטורי - ₪18</option>
-                        <option value="דגם 27 - מעמד קלסרים" data-price="26">דגם 27: מעמד קלסרים/תיקיות שולחני - ₪26</option>
-                        <option value="דגם 28 - מתקן למפתחות ומכתבים" data-price="28">דגם 28: מתקן למפתחות ומכתבים - ₪28</option>
-                        <option value="דגם 29 - מתקן תצוגה לספר בישול" data-price="28">דגם 29: מתקן תצוגה לספר בישול - ₪28</option>
-                        <option value="דגם 30 - קופסת אחסון משחקים" data-price="26">דגם 30: קופסת אחסון משחקים - ₪26</option>
                     </select>
                 </div>
                 
@@ -803,7 +195,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label>הוספת פטישים (29 ₪ ליחידה, אופציונלי):</label>
+                    <label>הוספת פטישים (<span class="hammer-val">29</span> ₪ ליחידה, אופציונלי):</label>
                     <input type="number" name="hammersCount" id="hammersCount" min="0" value="0" placeholder="כמות פטישים מבוקשת" oninput="calculateTotal()" onchange="calculateTotal()">
                 </div>
 
@@ -813,26 +205,11 @@
 
                 <input type="hidden" name="calculatedTotal" id="calculatedTotalInput" value="">
 
-                <div class="form-group">
-                    <label>שם איש קשר ראשי:</label>
-                    <input type="text" name="orderName" required>
-                </div>
-                <div class="form-group">
-                    <label>שם איש קשר נוסף:</label>
-                    <input type="text" name="orderSecondContact" placeholder="שם מלא של איש קשר נוסף">
-                </div>
-                <div class="form-group">
-                    <label>טלפון:</label>
-                    <input type="tel" name="orderPhone" required>
-                </div>
-                <div class="form-group">
-                    <label>כתובת מלאה למשלוח (גדרה עד חדרה):</label>
-                    <input type="text" name="orderAddress" required>
-                </div>
-                <div class="form-group">
-                    <label>הערות נוספות:</label>
-                    <textarea name="orderNotes" rows="2" placeholder="הערות מיוחדות..."></textarea>
-                </div>
+                <div class="form-group"><label>שם איש קשר ראשי:</label><input type="text" name="orderName" required></div>
+                <div class="form-group"><label>שם איש קשר נוסף:</label><input type="text" name="orderSecondContact" placeholder="שם מלא של איש קשר נוסף"></div>
+                <div class="form-group"><label>טלפון:</label><input type="tel" name="orderPhone" required></div>
+                <div class="form-group"><label>כתובת מלאה למשלוח (גדרה עד חדרה):</label><input type="text" name="orderAddress" required></div>
+                <div class="form-group"><label>הערות נוספות:</label><textarea name="orderNotes" rows="2" placeholder="הערות מיוחדות..."></textarea></div>
                 <div class="btn-container">
                     <button type="submit" class="btn btn-email" id="emailSubmitBtn">שלח הזמנה אוטומטית למייל ולגיליון</button>
                     <button type="button" class="btn btn-whatsapp" onclick="sendOrderWhatsApp()">שלח הזמנה לוואטסאפ</button>
@@ -841,139 +218,22 @@
             </form>
         </section>
 
-        <!-- Inspiration & Design Section -->
         <section id="designs">
             <h2>השראה ועיצוב ערכות (עבודת יד ושבלונות)</h2>
             <p>התרשמו ממגוון אפשרויות עיצוב יצירתיות לערכות העץ שלנו – בעזרת שבלונות, צבעים, נצנצים וכלי חריטה מעשירים.</p>
-
-            <div class="designs-grid">
-                <div class="design-card">
-                    <img src="design1.jpg" alt="קולקציית עבודת יד - שבלונות בלונים" class="design-img" onerror="tryImageFormats(this, 'design1')">
-                    <div class="design-info">
-                        <div class="design-title">קולקציית עבודת יד - קישוטי שבלונות</div>
-                    </div>
-                </div>
-
-                <div class="design-card">
-                    <img src="design2.jpg" alt="קולקציית שבלונות אלגנטיות" class="design-img" onerror="tryImageFormats(this, 'design2')">
-                    <div class="design-info">
-                        <div class="design-title">קישוטי שבלונות עדינים ואיורים</div>
-                    </div>
-                </div>
-
-                <div class="design-card">
-                    <img src="design3.jpg" alt="קולקציית ג'ונגל ופרחים" class="design-img" onerror="tryImageFormats(this, 'design3')">
-                    <div class="design-info">
-                        <div class="design-title">עיצובי חיות, ג'ונגל ופרחים צבעוניים</div>
-                    </div>
-                </div>
-
-                <div class="design-card">
-                    <img src="design4.jpg" alt="קולקציית נתנאל - שבלונות ונצנצים" class="design-img" onerror="tryImageFormats(this, 'design4')">
-                    <div class="design-info">
-                        <div class="design-title">עיצוב אישי בשילוב נצנצים וחריטה</div>
-                    </div>
-                </div>
-            </div>
+            <div class="designs-grid" id="designsGrid"></div>
         </section>
 
-        <!-- Instructions Section -->
         <section id="instructions">
             <h2>הוראות הרכבה לדגמים</h2>
             <p>כאן תוכלו להוריד או לצפות בחוברות ההוראות המפורטות לכל דגם ודגם. ההוראות כוללות שיוף חלקים, חיבור במסמרים, גימור בשופין ועיצוב אישי.</p>
-            
-            <div class="instructions-list">
-                <div class="instruction-item"><span>דגם 1</span><a href="model_1.pdf" target="_blank" class="instruction-btn">הוראות PDF</a></div>
-                <div class="instruction-item"><span>דגם 2</span><a href="model_2.pdf" target="_blank" class="instruction-btn">הוראות PDF</a></div>
-                <div class="instruction-item"><span>דגם 3</span><a href="model_3.pdf" target="_blank" class="instruction-btn">הוראות PDF</a></div>
-                <div class="instruction-item"><span>דגם 4</span><a href="model_4.pdf" target="_blank" class="instruction-btn">הוראות PDF</a></div>
-                <div class="instruction-item"><span>דגם 5</span><a href="model_5.pdf" target="_blank" class="instruction-btn">הוראות PDF</a></div>
-                <div class="instruction-item"><span>דגם 6</span><a href="model_6.pdf" target="_blank" class="instruction-btn">הוראות PDF</a></div>
-                <div class="instruction-item"><span>דגם 7</span><a href="model_7.pdf" target="_blank" class="instruction-btn">הוראות PDF</a></div>
-                <div class="instruction-item"><span>דגם 8</span><a href="model_8.pdf" target="_blank" class="instruction-btn">הוראות PDF</a></div>
-                <div class="instruction-item"><span>דגם 9</span><a href="model_9.pdf" target="_blank" class="instruction-btn">הוראות PDF</a></div>
-                <div class="instruction-item"><span>דגם 10</span><a href="model_10.pdf" target="_blank" class="instruction-btn">הוראות PDF</a></div>
-                <div class="instruction-item"><span>דגם 11</span><a href="model_11.pdf" target="_blank" class="instruction-btn">הוראות PDF</a></div>
-                <div class="instruction-item"><span>דגם 12</span><a href="model_12.pdf" target="_blank" class="instruction-btn">הוראות PDF</a></div>
-                <div class="instruction-item"><span>דגם 13</span><a href="model_13.pdf" target="_blank" class="instruction-btn">הוראות PDF</a></div>
-                <div class="instruction-item"><span>דגם 14</span><a href="model_14.pdf" target="_blank" class="instruction-btn">הוראות PDF</a></div>
-                <div class="instruction-item"><span>דגם 15</span><a href="model_15.pdf" target="_blank" class="instruction-btn">הוראות PDF</a></div>
-                <div class="instruction-item"><span>דגם 16</span><a href="model_16.pdf" target="_blank" class="instruction-btn">הוראות PDF</a></div>
-                <div class="instruction-item"><span>דגם 17</span><a href="model_17.pdf" target="_blank" class="instruction-btn">הוראות PDF</a></div>
-                <div class="instruction-item"><span>דגם 19</span><a href="model_19.pdf" target="_blank" class="instruction-btn">הוראות PDF</a></div>
-                <div class="instruction-item"><span>דגם 20</span><a href="model_20.pdf" target="_blank" class="instruction-btn">הוראות PDF</a></div>
-                <div class="instruction-item"><span>דגם 21</span><a href="model_21.pdf" target="_blank" class="instruction-btn">הוראות PDF</a></div>
-                <div class="instruction-item"><span>דגם 22</span><a href="model_22.pdf" target="_blank" class="instruction-btn">הוראות PDF</a></div>
-                <div class="instruction-item"><span>דגם 23</span><a href="model_23.pdf" target="_blank" class="instruction-btn">הוראות PDF</a></div>
-                <div class="instruction-item"><span>דגם 25</span><a href="model_25.pdf" target="_blank" class="instruction-btn">הוראות PDF</a></div>
-                <div class="instruction-item"><span>דגם 26</span><a href="model_26.pdf" target="_blank" class="instruction-btn">הוראות PDF</a></div>
-                <div class="instruction-item"><span>דגם 27</span><a href="model_27.pdf" target="_blank" class="instruction-btn">הוראות PDF</a></div>
-                <div class="instruction-item"><span>דגם 28</span><a href="model_28.pdf" target="_blank" class="instruction-btn">הוראות PDF</a></div>
-                <div class="instruction-item"><span>דגם 29</span><a href="model_29.pdf" target="_blank" class="instruction-btn">הוראות PDF</a></div>
-                <div class="instruction-item"><span>דגם 30</span><a href="model_30.pdf" target="_blank" class="instruction-btn">הוראות PDF</a></div>
-                <div class="instruction-item"><span>אדנית עץ מלבנית</span><a href="adv1_instructions.pdf" target="_blank" class="instruction-btn">הוראות PDF</a></div>
-                <div class="instruction-item"><span>ארגז אחסון מעץ</span><a href="adv2_instructions.pdf" target="_blank" class="instruction-btn">הוראות PDF</a></div>
-                <div class="instruction-item"><span>כיסא מרובע עם משענת</span><a href="adv3_instructions.pdf" target="_blank" class="instruction-btn">הוראות PDF</a></div>
-                <div class="instruction-item"><span>מעמד עציצים מדורג</span><a href="adv4_instructions.pdf" target="_blank" class="instruction-btn">הוראות PDF</a></div>
-                <div class="instruction-item"><span>ספסל / שידת נעליים</span><a href="adv5_instructions.pdf" target="_blank" class="instruction-btn">הוראות PDF</a></div>
-                <div class="instruction-item"><span>שרפרף מרובע נמוך</span><a href="adv6_instructions.pdf" target="_blank" class="instruction-btn">הוראות PDF</a></div>
-            </div>
+            <div class="instructions-list" id="instructionsList"></div>
         </section>
 
-        <!-- Advanced Catalog Section -->
         <section id="advanced">
             <h2>קטלוג מתקדמים / בוגרים</h2>
             <p>יצירות עץ מתקדמות אמיתיות וגדולות יותר עבור מתקדמים ובוגרים, לקבלת מוצר שימושי ובנוי מעץ ברמה הגבוהה ביותר.</p>
-
-            <div class="catalog-grid" style="margin-top: 25px;">
-                <div class="product-card">
-                    <img src="adv1.jpg" alt="שרפרף מרובע נמוך" class="product-img" onerror="tryImageFormats(this, 'adv1')">
-                    <div class="product-info">
-                        <div class="product-title">שרפרף מרובע נמוך</div>
-                        <div class="product-price">₪59</div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <img src="adv2.jpg" alt="אדנית עץ מלבנית" class="product-img" onerror="tryImageFormats(this, 'adv2')">
-                    <div class="product-info">
-                        <div class="product-title">אדנית עץ מלבנית</div>
-                        <div class="product-price">₪89</div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <img src="adv3.jpg" alt="ספסל / שידת נעליים" class="product-img" onerror="tryImageFormats(this, 'adv3')">
-                    <div class="product-info">
-                        <div class="product-title">ספסל / שידת נעליים</div>
-                        <div class="product-price">₪129</div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <img src="adv4.jpg" alt="כיסא מרובע עם משענת" class="product-img" onerror="tryImageFormats(this, 'adv4')">
-                    <div class="product-info">
-                        <div class="product-title">כיסא מרובע עם משענת</div>
-                        <div class="product-price">₪99</div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <img src="adv5.jpg" alt="ארגז אחסון מעץ" class="product-img" onerror="tryImageFormats(this, 'adv5')">
-                    <div class="product-info">
-                        <div class="product-title">ארגז אחסון מעץ</div>
-                        <div class="product-price">₪129</div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <img src="adv6.jpg" alt="מעמד עציצים מדורג" class="product-img" onerror="tryImageFormats(this, 'adv6')">
-                    <div class="product-info">
-                        <div class="product-title">מעמד עציצים מדורג</div>
-                        <div class="product-price">₪129</div>
-                    </div>
-                </div>
-            </div>
+            <div class="catalog-grid" style="margin-top: 25px;" id="advancedGrid"></div>
         </section>
 
         <section id="workshops">
@@ -982,47 +242,18 @@
             <p><strong>פעילים משנת 2011!</strong> קיימת אפשרות גבייה מהמוסד או ישירות מההורים דרך מערכת גבייה אוטומטית מהאתר. המדריך מגיע עם כל הציוד הנדרש.</p>
             <p>לקבלת הצעת מחיר לפתיחת חוג או סדנא, מלאו את הטופס:</p>
 
-            <!-- טופס סדנאות מחובר ל-Web3Forms -->
             <form action="https://api.web3forms.com/submit" method="POST" id="workshopForm" style="margin-top: 20px;">
                 <input type="hidden" name="access_key" value="3ac80b49-ea81-461d-809b-b159f01331ab">
                 <input type="hidden" name="subject" value="בקשה לפתיחת חוג/סדנא חדשה">
-                
-                <div class="form-group">
-                    <label>שם המוסד:</label>
-                    <input type="text" name="wsInstitution" id="wsInstitution" required>
-                </div>
-                <div class="form-group">
-                    <label>טלפון איש קשר:</label>
-                    <input type="tel" name="wsPhone" id="wsPhone" required>
-                </div>
-                <div class="form-group">
-                    <label>טלפון לוואטסאפ:</label>
-                    <input type="tel" name="wsWhatsapp" id="wsWhatsapp" required>
-                </div>
-                <div class="form-group">
-                    <label>כתובת מייל של המוסד:</label>
-                    <input type="email" name="wsEmail" id="wsEmail" required>
-                </div>
-                <div class="form-group">
-                    <label>פירוט הפעילות הנדרש:</label>
-                    <textarea name="wsDetails" id="wsDetails" rows="3" required></textarea>
-                </div>
-                <div class="form-group">
-                    <label>מועד התחלה:</label>
-                    <input type="date" name="wsStartDate" id="wsStartDate" required>
-                </div>
-                <div class="form-group">
-                    <label>מועד סיום:</label>
-                    <input type="date" name="wsEndDate" id="wsEndDate" required>
-                </div>
-                <div class="form-group">
-                    <label>מקום הפעילות הנדרש:</label>
-                    <input type="text" name="wsLocation" id="wsLocation" required>
-                </div>
-                <div class="form-group">
-                    <label>הערות:</label>
-                    <textarea name="wsNotes" id="wsNotes" rows="2"></textarea>
-                </div>
+                <div class="form-group"><label>שם המוסד:</label><input type="text" name="wsInstitution" id="wsInstitution" required></div>
+                <div class="form-group"><label>טלפון איש קשר:</label><input type="tel" name="wsPhone" id="wsPhone" required></div>
+                <div class="form-group"><label>טלפון לוואטסאפ:</label><input type="tel" name="wsWhatsapp" id="wsWhatsapp" required></div>
+                <div class="form-group"><label>כתובת מייל של המוסד:</label><input type="email" name="wsEmail" id="wsEmail" required></div>
+                <div class="form-group"><label>פירוט הפעילות הנדרש:</label><textarea name="wsDetails" id="wsDetails" rows="3" required></textarea></div>
+                <div class="form-group"><label>מועד התחלה:</label><input type="date" name="wsStartDate" id="wsStartDate" required></div>
+                <div class="form-group"><label>מועד סיום:</label><input type="date" name="wsEndDate" id="wsEndDate" required></div>
+                <div class="form-group"><label>מקום הפעילות הנדרש:</label><input type="text" name="wsLocation" id="wsLocation" required></div>
+                <div class="form-group"><label>הערות:</label><textarea name="wsNotes" id="wsNotes" rows="2"></textarea></div>
                 <div class="btn-container">
                     <button type="submit" class="btn btn-email">שלח בקשה לסדנא למייל</button>
                     <button type="button" class="btn btn-whatsapp" onclick="sendWsWhatsApp()">שלח בקשה לסדנא לוואטסאפ</button>
@@ -1033,38 +264,151 @@
         <section id="contact">
             <h2>יצירת קשר</h2>
             <p><strong>כתובת האתר:</strong> center-wood.co.il</p>
-            <p><strong>מספר טלפון:</strong> 053-5252789</p>
-            <p><strong>דוא"ל:</strong> netanelsport@gmail.com</p>
-            
+            <p><strong>מספר טלפון:</strong> <span class="phone-val">053-5252789</span></p>
+            <p><strong>דוא"ל:</strong> <span class="email-val">netanelsport@gmail.com</span></p>
             <div class="btn-container" style="max-width: 400px; margin-top: 20px;">
-                <a href="https://wa.me/972535252789" class="btn btn-whatsapp" target="_blank">פנייה מהירה בוואטסאפ</a>
-                <a href="mailto:netanelsport@gmail.com" class="btn btn-email">שלח מייל ישירות</a>
+                <a href="https://wa.me/972535252789" id="contactWaBtn" class="btn btn-whatsapp" target="_blank">פנייה מהירה בוואטסאפ</a>
+                <a href="mailto:netanelsport@gmail.com" id="contactMailBtn" class="btn btn-email">שלח מייל ישירות</a>
             </div>
         </section>
-
     </div>
 
     <footer>
-        <p>כל הזכויות שמורות © 2026 המרכז לחוגי נגרות</p>
+        <p>כל הזכויות שמורות © 2026 <span id="footerTitle">המרכז לחוגי נגרות</span></p>
         <p><a href="#privacy" style="color: var(--secondary); text-decoration: none;">הצהרת פרטיות</a> | <a href="#rules" style="color: var(--secondary); text-decoration: none;">תקנון ואחריות</a></p>
         <p class="tlh">ט.ל.ח</p>
     </footer>
 
     <script>
-        const phoneNum = "972535252789";
-        const invoiceClearingUrl = "https://private.invoice4u.co.il/newsite/he/clearing/public/i4u-clearing?ProductGuid=bcb546f6-ffd0-48e0-9eb5-6e23e04e277c";
+        let phoneNum = "972535252789";
+        let invoiceClearingUrl = "https://private.invoice4u.co.il/newsite/he/clearing/public/i4u-clearing?ProductGuid=bcb546f6-ffd0-48e0-9eb5-6e23e04e277c";
+        let shippingCost = 39;
+        let hammerCost = 29;
         const sheetDbUrl = "https://sheetdb.io/api/v1/24v3xc87ruow0";
 
-        // פונקציה חכמה שמנסה את כל סיומות התמונה האפשריות (.jpg, .jpeg, .jfif, .png)
         function tryImageFormats(imgElement, baseName) {
+            const cleanBase = baseName.replace(/\.[^/.]+$/, "");
             const attempts = parseInt(imgElement.getAttribute('data-attempts') || '0', 10);
             const extensions = ['.jpg', '.jpeg', '.jfif', '.png', '.JPG', '.JPEG', '.JFIF'];
             if (attempts < extensions.length) {
                 imgElement.setAttribute('data-attempts', attempts + 1);
-                imgElement.src = baseName + extensions[attempts];
+                imgElement.src = cleanBase + extensions[attempts];
             } else {
                 imgElement.onerror = null;
-                imgElement.src = 'https://via.placeholder.com/300x220?text=' + encodeURIComponent(baseName);
+                imgElement.src = 'https://via.placeholder.com/300x220?text=' + encodeURIComponent(cleanBase);
+            }
+        }
+
+        async function loadSiteData() {
+            try {
+                const response = await fetch('site-data.json?v=' + Date.now());
+                if (!response.ok) return;
+                const data = await response.json();
+
+                if (data.siteTitle) {
+                    document.getElementById('topBarTitle').innerText = data.siteTitle;
+                    document.getElementById('mainTitle').innerText = data.siteTitle;
+                    document.getElementById('footerTitle').innerText = data.siteTitle;
+                }
+                if (data.subtitle) document.getElementById('subTitle').innerText = data.subtitle;
+                if (data.promoBanner) document.getElementById('promoBannerText').innerText = data.promoBanner;
+                if (data.logoImage) document.getElementById('siteLogo').src = data.logoImage;
+                if (data.aboutParagraph1) document.getElementById('aboutP1').innerText = data.aboutParagraph1;
+                if (data.aboutParagraph2) document.getElementById('aboutP2').innerText = data.aboutParagraph2;
+                
+                if (data.whatsappNumber) {
+                    phoneNum = data.whatsappNumber;
+                    document.getElementById('contactWaBtn').href = `https://wa.me/${phoneNum}`;
+                }
+                if (data.contactPhone) {
+                    document.querySelectorAll('.phone-val').forEach(el => el.innerText = data.contactPhone);
+                }
+                if (data.contactEmail) {
+                    document.querySelectorAll('.email-val').forEach(el => el.innerText = data.contactEmail);
+                    document.getElementById('contactMailBtn').href = `mailto:${data.contactEmail}`;
+                }
+                if (typeof data.shippingCost === 'number') {
+                    shippingCost = data.shippingCost;
+                    document.querySelectorAll('.shipping-val').forEach(el => el.innerText = shippingCost);
+                }
+                if (typeof data.hammerCost === 'number') {
+                    hammerCost = data.hammerCost;
+                    document.querySelectorAll('.hammer-val').forEach(el => el.innerText = hammerCost);
+                }
+                if (data.invoiceClearingUrl) {
+                    invoiceClearingUrl = data.invoiceClearingUrl;
+                }
+
+                // טעינת מוצרי הקטלוג + רשימת הבחירה בטופס
+                const catalogGrid = document.getElementById('catalogGrid');
+                const modelSelect = document.getElementById('selectedModel');
+                if (data.products && Array.isArray(data.products)) {
+                    catalogGrid.innerHTML = '';
+                    modelSelect.innerHTML = '<option value="" disabled selected>-- בחר דגם מהרשימה --</option>';
+                    data.products.forEach(item => {
+                        catalogGrid.innerHTML += `
+                            <div class="product-card">
+                                <img src="${item.image}" alt="${item.name}" class="product-img" onerror="tryImageFormats(this, '${item.image}')">
+                                <div class="product-info">
+                                    <div class="product-title">${item.name}</div>
+                                    <div class="product-price">₪${item.price}</div>
+                                </div>
+                            </div>`;
+                        const opt = document.createElement('option');
+                        opt.value = item.name;
+                        opt.setAttribute('data-price', item.price);
+                        opt.textContent = `${item.name} - ₪${item.price}`;
+                        modelSelect.appendChild(opt);
+                    });
+                }
+
+                // טעינת קטלוג מתקדמים
+                const advancedGrid = document.getElementById('advancedGrid');
+                if (data.advancedProducts && Array.isArray(data.advancedProducts)) {
+                    advancedGrid.innerHTML = '';
+                    data.advancedProducts.forEach(item => {
+                        advancedGrid.innerHTML += `
+                            <div class="product-card">
+                                <img src="${item.image}" alt="${item.name}" class="product-img" onerror="tryImageFormats(this, '${item.image}')">
+                                <div class="product-info">
+                                    <div class="product-title">${item.name}</div>
+                                    <div class="product-price">₪${item.price}</div>
+                                </div>
+                            </div>`;
+                    });
+                }
+
+                // טעינת גלריית השראה
+                const designsGrid = document.getElementById('designsGrid');
+                if (data.designs && Array.isArray(data.designs)) {
+                    designsGrid.innerHTML = '';
+                    data.designs.forEach(item => {
+                        designsGrid.innerHTML += `
+                            <div class="design-card">
+                                <img src="${item.image}" alt="${item.title}" class="design-img" onerror="tryImageFormats(this, '${item.image}')">
+                                <div class="design-info">
+                                    <div class="design-title">${item.title}</div>
+                                </div>
+                            </div>`;
+                    });
+                }
+
+                // טעינת הוראות הרכבה
+                const instructionsList = document.getElementById('instructionsList');
+                if (data.instructions && Array.isArray(data.instructions)) {
+                    instructionsList.innerHTML = '';
+                    data.instructions.forEach(item => {
+                        instructionsList.innerHTML += `
+                            <div class="instruction-item">
+                                <span>${item.title}</span>
+                                <a href="${item.file}" target="_blank" class="instruction-btn">הוראות PDF</a>
+                            </div>`;
+                    });
+                }
+
+                calculateTotal();
+            } catch (e) {
+                console.error('שגיאה בטעינת נתוני האתר:', e);
             }
         }
 
@@ -1072,7 +416,6 @@
             const selectElement = document.getElementById('selectedModel');
             const selectedOption = selectElement.options[selectElement.selectedIndex];
             const price = selectedOption ? selectedOption.getAttribute('data-price') : '';
-            
             document.getElementById('unitPrice').value = price || '';
             calculateTotal();
         }
@@ -1081,33 +424,29 @@
             const selectElement = document.getElementById('selectedModel');
             const selectedOption = selectElement.options[selectElement.selectedIndex];
             const modelName = selectedOption && selectedOption.value ? selectedOption.value : '';
-            
             const qty = parseInt(document.getElementById('quantity').value, 10) || 0;
             const unitPrice = parseFloat(document.getElementById('unitPrice').value) || 0;
             const hammers = parseInt(document.getElementById('hammersCount').value, 10) || 0;
-            
             const summaryBox = document.getElementById('orderSummary');
             const hiddenTotal = document.getElementById('calculatedTotalInput');
 
             if (qty > 0 && unitPrice > 0) {
                 const productsTotal = qty * unitPrice;
-                const hammersTotal = hammers > 0 ? hammers * 29 : 0;
-                const shipping = 39;
-                const grandTotal = productsTotal + hammersTotal + shipping;
-
+                const hammersTotal = hammers > 0 ? hammers * hammerCost : 0;
+                const grandTotal = productsTotal + hammersTotal + shippingCost;
                 hiddenTotal.value = grandTotal;
                 summaryBox.innerHTML = 
                     `סיכום ביניים (${modelName}): ${qty} יח' × ₪${unitPrice} = ₪${productsTotal}` + 
                     (hammers > 0 ? ` + ${hammers} פטישים (₪${hammersTotal})` : '') + 
-                    ` + משלוח (₪39) = <span style="color:#b8860b; font-size:1.3rem;">₪${grandTotal}</span>`;
+                    ` + משלוח (₪${shippingCost}) = <span style="color:#b8860b; font-size:1.3rem;">₪${grandTotal}</span>`;
                 return grandTotal;
             } else if (unitPrice > 0) {
                 hiddenTotal.value = '';
-                summaryBox.innerHTML = `נבחר: <strong>${modelName}</strong> (₪${unitPrice} ליח') — בחר כמות יחידות למעלה לחישוב הסכום הסופי כולל משלוח (₪39).`;
+                summaryBox.innerHTML = `נבחר: <strong>${modelName}</strong> (₪${unitPrice} ליח') — בחר כמות יחידות למעלה לחישוב הסכום הסופי כולל משלוח (₪${shippingCost}).`;
                 return 0;
             } else {
                 hiddenTotal.value = '';
-                summaryBox.innerHTML = `סיכום ביניים: בחר דגם וכמות לתצוגת מחיר סופי. (כולל משלוח בסך 39 ₪)`;
+                summaryBox.innerHTML = `סיכום ביניים: בחר דגם וכמות לתצוגת מחיר סופי. (כולל משלוח בסך ${shippingCost} ₪)`;
                 return 0;
             }
         }
@@ -1120,7 +459,6 @@
             const name = document.querySelector('#orderForm input[name="orderName"]').value.trim();
             const phone = document.querySelector('#orderForm input[name="orderPhone"]').value.trim();
             const address = document.querySelector('#orderForm input[name="orderAddress"]').value.trim();
-
             if (!modelName || !qty || !price || !name || !phone || !address) {
                 alert('אנא מלא את כל שדות החובה בטופס ההזמנה (דגם, כמות, שם איש קשר, טלפון וכתובת מלאה) לפני המשך הפעולה.');
                 return false;
@@ -1130,7 +468,6 @@
 
         function sendOrderWhatsApp() {
             if (!validateOrderFields()) return;
-
             const selectElement = document.getElementById('selectedModel');
             const modelName = selectElement.options[selectElement.selectedIndex].value;
             const qty = document.getElementById('quantity').value;
@@ -1141,17 +478,14 @@
             const phone = document.querySelector('#orderForm input[name="orderPhone"]').value.trim();
             const address = document.querySelector('#orderForm input[name="orderAddress"]').value.trim();
             const notes = document.querySelector('#orderForm textarea[name="orderNotes"]').value.trim();
-
             const total = calculateTotal();
             const msg = `הזמנה חדשה מהאתר:%0a*דגם:* ${modelName}%0a*כמות:* ${qty}%0a*מחיר ליחידה:* ₪${price}%0a*פטישים:* ${hammers}%0a*סה"כ לתשלום (כולל משלוח):* ₪${total}%0a*איש קשר ראשי:* ${name}%0a*איש קשר נוסף:* ${secondContact}%0a*טלפון:* ${phone}%0a*כתובת (גדרה-חדרה):* ${address}%0a*הערות:* ${notes}`;
             window.open(`https://wa.me/${phoneNum}?text=${msg}`, '_blank');
         }
 
-        // פונקציה מרכזית לשליחת הנתונים גם למייל וגם לגוגל שיטס (10 עמודות באנגלית)
         async function submitOrderToSystems(grandTotal) {
             const form = document.getElementById('orderForm');
             const formData = new FormData(form);
-
             const selectElement = document.getElementById('selectedModel');
             const modelName = selectElement.options[selectElement.selectedIndex].value;
             const qty = document.getElementById('quantity').value;
@@ -1162,56 +496,45 @@
             const address = document.querySelector('#orderForm input[name="orderAddress"]').value.trim();
             const notes = document.querySelector('#orderForm textarea[name="orderNotes"]').value.trim();
 
-            // 1. שליחה למייל דרך Web3Forms
             const emailPromise = fetch(form.action, {
                 method: 'POST',
                 body: formData,
                 headers: { 'Accept': 'application/json' }
             }).catch(err => console.warn('שגיאה בשליחת מייל:', err));
 
-            // 2. שמירה אוטומטית ל-Google Sheets דרך SheetDB
             const sheetPayload = {
-                data: [
-                    {
-                        "date": new Date().toLocaleString('he-IL'),
-                        "model": modelName,
-                        "qty": qty,
-                        "hammers": hammers,
-                        "total": grandTotal.toString(),
-                        "name": name,
-                        "second_contact": secondContact,
-                        "phone": phone,
-                        "address": address,
-                        "notes": notes
-                    }
-                ]
+                data: [{
+                    "date": new Date().toLocaleString('he-IL'),
+                    "model": modelName,
+                    "qty": qty,
+                    "hammers": hammers,
+                    "total": grandTotal.toString(),
+                    "name": name,
+                    "second_contact": secondContact,
+                    "phone": phone,
+                    "address": address,
+                    "notes": notes
+                }]
             };
 
             const sheetPromise = fetch(sheetDbUrl, {
                 method: 'POST',
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                },
+                headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
                 body: JSON.stringify(sheetPayload)
             }).catch(err => console.warn('שגיאה בשמירה לגיליון:', err));
 
             await Promise.all([emailPromise, sheetPromise]);
         }
 
-        // טיפול בלחיצה על כפתור "שלח הזמנה אוטומטית למייל ולגיליון"
         async function handleFormSubmit(event) {
             event.preventDefault();
             if (!validateOrderFields()) return false;
-
             const grandTotal = calculateTotal();
             const submitBtn = document.getElementById('emailSubmitBtn');
             const originalText = submitBtn.innerText;
             submitBtn.disabled = true;
             submitBtn.innerText = 'שולח למייל ולגיליון...';
-
             await submitOrderToSystems(grandTotal);
-
             submitBtn.disabled = false;
             submitBtn.innerText = originalText;
             alert('ההזמנה נשלחה למייל ונרשמה בהצלחה בגיליון ההזמנות!');
@@ -1220,32 +543,24 @@
             return false;
         }
 
-        // טיפול בלחיצה על כפתור התשלום באשראי
         async function processPayment() {
             if (!validateOrderFields()) return;
-
             const grandTotal = calculateTotal();
             if (grandTotal <= 0) {
                 alert('אנא בחר דגם וכמות תקינים מהרשימה לפני המעבר לתשלום.');
                 return;
             }
-
             const payBtn = document.getElementById('payBtn');
             const originalText = payBtn.innerText;
             payBtn.disabled = true;
             payBtn.innerText = 'שומר הזמנה ומעביר לתשלום...';
-
             await submitOrderToSystems(grandTotal);
-
             payBtn.disabled = false;
             payBtn.innerText = originalText;
-
             if (navigator.clipboard && navigator.clipboard.writeText) {
                 navigator.clipboard.writeText(grandTotal.toString()).catch(() => {});
             }
-
             alert(`פרטי ההזמנה נשלחו ונשמרו בהצלחה במערכת ובגיליון!\n\nהסכום לתשלום הינו: ₪${grandTotal}\n(הסכום הועתק ללוח ההדבקה לנוחיותך - במידת הצורך הדבק אותו בדף התשלום).`);
-
             const paymentLink = `${invoiceClearingUrl}&Sum=${grandTotal}&sum=${grandTotal}`;
             const newWindow = window.open(paymentLink, '_blank');
             if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
@@ -1263,15 +578,15 @@
             const eDate = document.getElementById('wsEndDate').value;
             const loc = document.getElementById('wsLocation').value.trim();
             const notes = document.getElementById('wsNotes').value.trim();
-
             if (!inst || !phone || !details) {
                 alert('אנא מלא לפחות את שם המוסד, טלפון ופירוט הפעילות.');
                 return;
             }
-
             const msg = `בקשה לפתיחת חוג/סדנא:%0a*שם המוסד:* ${inst}%0a*טלפון קשר:* ${phone}%0a*וואטסאפ:* ${wa}%0a*מייל:* ${email}%0a*פירוט:* ${details}%0a*התחלה:* ${sDate}%0a*סיום:* ${eDate}%0a*מקום:* ${loc}%0a*הערות:* ${notes}`;
             window.open(`https://wa.me/${phoneNum}?text=${msg}`, '_blank');
         }
+
+        window.addEventListener('DOMContentLoaded', loadSiteData);
     </script>
 </body>
 </html>
