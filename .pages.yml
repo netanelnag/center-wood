@@ -1,3 +1,96 @@
 media:
-  input:  .
-  output:  .
+  input: .
+  output: .
+
+content:
+  - name: site_settings
+    label: ניהול תוכן, קטלוג וסליקה
+    type: file
+    path: site-data.json
+    fields:
+      - name: siteTitle
+        label: שם האתר (כותרת ראשית)
+        type: string
+      - name: subtitle
+        label: כותרת משנה
+        type: string
+      - name: promoBanner
+        label: באנר מבצעים עליון
+        type: string
+      - name: logoImage
+        label: תמונת לוגו
+        type: image
+      - name: aboutParagraph1
+        label: אודות - פסקה ראשונה
+        type: text
+      - name: aboutParagraph2
+        label: אודות - פסקה שנייה
+        type: text
+      - name: contactPhone
+        label: טלפון להצגה באתר
+        type: string
+      - name: whatsappNumber
+        label: מספר וואטסאפ (ללא פלוס, מתחיל ב-972)
+        type: string
+      - name: contactEmail
+        label: כתובת אימייל
+        type: string
+      - name: shippingCost
+        label: מחיר משלוח (₪)
+        type: number
+      - name: hammerCost
+        label: מחיר פטיש (₪)
+        type: number
+      - name: invoiceClearingUrl
+        label: קישור סליקה (Invoice4u)
+        type: string
+      - name: products
+        label: קטלוג דגמים (מוצגים גם בטופס ההזמנה)
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: שם הדגם
+            type: string
+          - name: price
+            label: מחיר ליחידה (₪)
+            type: number
+          - name: image
+            label: תמונת הדגם
+            type: image
+      - name: advancedProducts
+        label: קטלוג מתקדמים / בוגרים
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: שם המוצר
+            type: string
+          - name: price
+            label: מחיר (₪)
+            type: number
+          - name: image
+            label: תמונת המוצר
+            type: image
+      - name: designs
+        label: גלריית השראה ועיצוב
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: כותרת התמונה
+            type: string
+          - name: image
+            label: תמונה
+            type: image
+      - name: instructions
+        label: הוראות הרכבה (קובצי PDF)
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: שם הדגם
+            type: string
+          - name: file
+            label: שם קובץ ה-PDF
+            type: string
