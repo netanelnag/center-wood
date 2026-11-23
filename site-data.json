@@ -48,7 +48,11 @@
     { "title": "קולקציית עבודת יד - קישוטי שבלונות", "image": "design1.jpg" },
     { "title": "קישוטי שבלונות עדינים ואיורים", "image": "design2.jpg" },
     { "title": "עיצובי חיות, ג'ונגל ופרחים צבעוניים", "image": "design3.jpg" },
-    { "title": "עיצוב אישי בשילוב נצנצים וחריטה", "image": "design4.jpg" }
+    { "title": "עיצוב אישי בשילוב נצנצים וחריטה", "image": "design4.jpg" },
+    { "title": "דוגמה לערכה בנויה", "image": "design5.jpg" },
+    { "title": "דוגמה לערכה בנויה", "image": "design6.jpg" },
+    { "title": "דוגמה לערכה בנויה", "image": "design7.jpg" },
+    { "title": "דוגמה לערכה בנויה", "image": "design8.jpg" }
   ],
   "instructions": [
     { "title": "דגם 1", "file": "model_1.pdf" },
