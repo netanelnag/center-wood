@@ -1,9 +1,9 @@
 {
   "siteTitle": "המרכז לחוגי נגרות",
-  "subtitle": "ערכות בנייה יצירה ועיצוב מעץ",
+  "subtitle": "ערכות בנייה בעץ. ליצירה ועיצוב אישי",
   "promoBanner": "✨ חדש! קטלוג תשפ\"ז — בקרוב דגמים חדשים ומיוחדים נוספים! ✨",
   "logoImage": "logo.jpeg",
-  "aboutParagraph1": "חברה המפעילה מגוון חוגי נגרות לחינוך רגיל ומיוחד החל מגיל הרך עד בוגרים וסדנאות לכל גיל משנת 2021 במתנסים, מוסדות חינוך, חינוך מיוחד ועוד.",
+  "aboutParagraph1": "המרכז לחוגי נגרות ערכות בנייה מעץ להרכבה עצמית, לצד חוגי נגרות וסדנאות לכל הגילאים למוסדות חינוך ומתנסים חינוך רגיל וחינוך מיוחד",
   "aboutParagraph2": "החברה מתמחה בציוד מקצועי וצוות בעל ניסיון, ידע ומקצועיות לביצוע תוצרים מעץ בעיצוב אישי מגוון ולחווית הצלחה מעצימה.",
   "contactPhone": "053-5252789",
   "whatsappNumber": "972535252789",
@@ -12,82 +12,324 @@
   "hammerCost": 29,
   "invoiceClearingUrl": "https://private.invoice4u.co.il/newsite/he/clearing/public/i4u-clearing?ProductGuid=bcb546f6-ffd0-48e0-9eb5-6e23e04e277c",
   "products": [
-    { "name": "דגם 1: מעמד מדורג ארבע קומות", "price": 26, "image": "model1.jpg" },
-    { "name": "דגם 2: ארגונית כלי כתיבה עם חלוקה", "price": 16, "image": "model2.jpeg" },
-    { "name": "דגם 3: מעמד מדורג / שלטים", "price": 26, "image": "model3.jpg" },
-    { "name": "דגם 4: ארגז כלים קטן", "price": 28, "image": "model4.jpg" },
-    { "name": "דגם 5: בית עציץ מוב", "price": 26, "image": "model5.jpg" },
-    { "name": "דגם 6: מעמד משולש לספר", "price": 28, "image": "model6.jpg" },
-    { "name": "דגם 7: מדף תלייה קטן", "price": 26, "image": "model7.jpg" },
-    { "name": "דגם 8: קופסת אוצר (מכסה רגיל)", "price": 26, "image": "model8.jpg" },
-    { "name": "דגם 9: מתקן לדפים ועטים", "price": 16, "image": "model9.jpg" },
-    { "name": "דגם 10: מעמד לטאבלט משודרג", "price": 22, "image": "model10.jpg" },
-    { "name": "דגם 12: סל ניירות שולחני", "price": 26, "image": "model12.jpg" },
-    { "name": "דגם 14: מתקן לתבלינים", "price": 26, "image": "model14.jpg" },
-    { "name": "דגם 16: מגש עץ בסיסי", "price": 28, "image": "model16.jpg" },
-    { "name": "דגם 19: מעמד לתחתיות כוסות", "price": 18, "image": "model19.jpg" },
-    { "name": "דגם 20: מדף פיני ישר", "price": 26, "image": "model20.jpeg" },
-    { "name": "דגם 22: תחתית מובעת לסיר חם", "price": 16, "image": "model22.jpg" },
-    { "name": "דגם 23: קופסת תה מחולקת (4 תאים)", "price": 28, "image": "model23.jpg" },
-    { "name": "דגם 25: מעמד שולחני למצות", "price": 26, "image": "model25.jpg" },
-    { "name": "דגם 26: שרפרף מיניאטורי", "price": 18, "image": "model26.jpg" },
-    { "name": "דגם 27: מעמד קלסרים/תיקיות שולחני", "price": 26, "image": "model27.jpg" },
-    { "name": "דגם 28: מתקן למפתחות ומכתבים", "price": 28, "image": "model28.jpg" },
-    { "name": "דגם 29: מתקן תצוגה לספר בישול", "price": 28, "image": "model29.jpeg" },
-    { "name": "דגם 30: קופסת אחסון משחקים", "price": 26, "image": "model30.jpeg" }
+    {
+      "name": "דגם 1: מעמד מדורג ארבע קומות",
+      "price": 26,
+      "image": "model1.jpg"
+    },
+    {
+      "name": "דגם 2: ארגונית כלי כתיבה עם חלוקה",
+      "price": 16,
+      "image": "model2.jpeg"
+    },
+    {
+      "name": "דגם 3: מעמד מדורג / שלטים",
+      "price": 26,
+      "image": "model3.jpg"
+    },
+    {
+      "name": "דגם 4: ארגז כלים קטן",
+      "price": 28,
+      "image": "model4.jpg"
+    },
+    {
+      "name": "דגם 5: בית עציץ מוב",
+      "price": 26,
+      "image": "model5.jpg"
+    },
+    {
+      "name": "דגם 6: מעמד משולש לספר",
+      "price": 28,
+      "image": "model6.jpg"
+    },
+    {
+      "name": "דגם 7: מדף תלייה קטן",
+      "price": 26,
+      "image": "model7.jpg"
+    },
+    {
+      "name": "דגם 8: קופסת אוצר (מכסה רגיל)",
+      "price": 26,
+      "image": "model8.jpg"
+    },
+    {
+      "name": "דגם 9: מתקן לדפים ועטים",
+      "price": 16,
+      "image": "model9.jpg"
+    },
+    {
+      "name": "דגם 10: מעמד לטאבלט משודרג",
+      "price": 22,
+      "image": "model10.jpg"
+    },
+    {
+      "name": "דגם 12: סל ניירות שולחני",
+      "price": 26,
+      "image": "model12.jpg"
+    },
+    {
+      "name": "דגם 14: מתקן לתבלינים",
+      "price": 26,
+      "image": "model14.jpg"
+    },
+    {
+      "name": "דגם 16: מגש עץ בסיסי",
+      "price": 28,
+      "image": "model16.jpg"
+    },
+    {
+      "name": "דגם 19: מעמד לתחתיות כוסות",
+      "price": 18,
+      "image": "model19.jpg"
+    },
+    {
+      "name": "דגם 20: מדף פיני ישר",
+      "price": 26,
+      "image": "model20.jpeg"
+    },
+    {
+      "name": "דגם 22: תחתית מובעת לסיר חם",
+      "price": 16,
+      "image": "model22.jpg"
+    },
+    {
+      "name": "דגם 23: קופסת תה מחולקת (4 תאים)",
+      "price": 28,
+      "image": "model23.jpg"
+    },
+    {
+      "name": "דגם 25: מעמד שולחני למצות",
+      "price": 26,
+      "image": "model25.jpg"
+    },
+    {
+      "name": "דגם 26: שרפרף מיניאטורי",
+      "price": 18,
+      "image": "model26.jpg"
+    },
+    {
+      "name": "דגם 27: מעמד קלסרים/תיקיות שולחני",
+      "price": 26,
+      "image": "model27.jpg"
+    },
+    {
+      "name": "דגם 28: מתקן למפתחות ומכתבים",
+      "price": 28,
+      "image": "model28.jpg"
+    },
+    {
+      "name": "דגם 29: מתקן תצוגה לספר בישול",
+      "price": 28,
+      "image": "model29.jpeg"
+    },
+    {
+      "name": "דגם 30: קופסת אחסון משחקים",
+      "price": 26,
+      "image": "model30.jpeg"
+    }
   ],
   "advancedProducts": [
-    { "name": "שרפרף מרובע נמוך", "price": 59, "image": "adv1.jpg" },
-    { "name": "אדנית עץ מלבנית", "price": 89, "image": "adv2.jpg" },
-    { "name": "ספסל / שידת נעליים", "price": 129, "image": "adv3.jpg" },
-    { "name": "כיסא מרובע עם משענת", "price": 99, "image": "adv4.jpg" },
-    { "name": "ארגז אחסון מעץ", "price": 129, "image": "adv5.jpg" },
-    { "name": "מעמד עציצים מדורג", "price": 129, "image": "adv6.jpg" }
+    {
+      "name": "שרפרף מרובע נמוך",
+      "price": 59,
+      "image": "adv1.jpg"
+    },
+    {
+      "name": "אדנית עץ מלבנית",
+      "price": 89,
+      "image": "adv2.jpg"
+    },
+    {
+      "name": "ספסל / שידת נעליים",
+      "price": 129,
+      "image": "adv3.jpg"
+    },
+    {
+      "name": "כיסא מרובע עם משענת",
+      "price": 99,
+      "image": "adv4.jpg"
+    },
+    {
+      "name": "ארגז אחסון מעץ",
+      "price": 129,
+      "image": "adv5.jpg"
+    },
+    {
+      "name": "מעמד עציצים מדורג",
+      "price": 129,
+      "image": "adv6.jpg"
+    }
   ],
   "designs": [
-    { "title": "קולקציית עבודת יד - קישוטי שבלונות", "image": "design1.jpg" },
-    { "title": "קישוטי שבלונות עדינים ואיורים", "image": "design2.jpg" },
-    { "title": "עיצובי חיות, ג'ונגל ופרחים צבעוניים", "image": "design3.jpg" },
-    { "title": "עיצוב אישי בשילוב נצנצים וחריטה", "image": "design4.jpg" },
-    { "title": "דוגמה לערכה בנויה", "image": "design5.jpg" },
-    { "title": "דוגמה לערכה בנויה", "image": "design6.jpg" },
-    { "title": "דוגמה לערכה בנויה", "image": "design7.jpg" },
-    { "title": "דוגמה לערכה בנויה", "image": "design8.jpg" }
+    {
+      "title": "קולקציית עבודת יד - קישוטי שבלונות",
+      "image": "design1.jpg"
+    },
+    {
+      "title": "קישוטי שבלונות עדינים ואיורים",
+      "image": "design2.jpg"
+    },
+    {
+      "title": "עיצובי חיות, ג'ונגל ופרחים צבעוניים",
+      "image": "design3.jpg"
+    },
+    {
+      "title": "עיצוב אישי בשילוב נצנצים וחריטה",
+      "image": "design4.jpg"
+    },
+    {
+      "title": "דוגמה לערכה בנויה",
+      "image": "design5.jpg"
+    },
+    {
+      "title": "דוגמה לערכה בנויה",
+      "image": "design6.jpg"
+    },
+    {
+      "title": "דוגמה לערכה בנויה",
+      "image": "design7.jpg"
+    },
+    {
+      "title": "דוגמה לערכה בנויה",
+      "image": "design8.jpg"
+    }
   ],
   "instructions": [
-    { "title": "דגם 1", "file": "model_1.pdf" },
-    { "title": "דגם 2", "file": "model_2.pdf" },
-    { "title": "דגם 3", "file": "model_3.pdf" },
-    { "title": "דגם 4", "file": "model_4.pdf" },
-    { "title": "דגם 5", "file": "model_5.pdf" },
-    { "title": "דגם 6", "file": "model_6.pdf" },
-    { "title": "דגם 7", "file": "model_7.pdf" },
-    { "title": "דגם 8", "file": "model_8.pdf" },
-    { "title": "דגם 9", "file": "model_9.pdf" },
-    { "title": "דגם 10", "file": "model_10.pdf" },
-    { "title": "דגם 11", "file": "model_11.pdf" },
-    { "title": "דגם 12", "file": "model_12.pdf" },
-    { "title": "דגם 13", "file": "model_13.pdf" },
-    { "title": "דגם 14", "file": "model_14.pdf" },
-    { "title": "דגם 15", "file": "model_15.pdf" },
-    { "title": "דגם 16", "file": "model_16.pdf" },
-    { "title": "דגם 17", "file": "model_17.pdf" },
-    { "title": "דגם 19", "file": "model_19.pdf" },
-    { "title": "דגם 20", "file": "model_20.pdf" },
-    { "title": "דגם 21", "file": "model_21.pdf" },
-    { "title": "דגם 22", "file": "model_22.pdf" },
-    { "title": "דגם 23", "file": "model_23.pdf" },
-    { "title": "דגם 25", "file": "model_25.pdf" },
-    { "title": "דגם 26", "file": "model_26.pdf" },
-    { "title": "דגם 27", "file": "model_27.pdf" },
-    { "title": "דגם 28", "file": "model_28.pdf" },
-    { "title": "דגם 29", "file": "model_29.pdf" },
-    { "title": "דגם 30", "file": "model_30.pdf" },
-    { "title": "אדנית עץ מלבנית", "file": "adv1_instructions.pdf" },
-    { "title": "ארגז אחסון מעץ", "file": "adv2_instructions.pdf" },
-    { "title": "כיסא מרובע עם משענת", "file": "adv3_instructions.pdf" },
-    { "title": "מעמד עציצים מדורג", "file": "adv4_instructions.pdf" },
-    { "title": "ספסל / שידת נעליים", "file": "adv5_instructions.pdf" },
-    { "title": "שרפרף מרובע נמוך", "file": "adv6_instructions.pdf" }
+    {
+      "title": "דגם 1",
+      "file": "model_1.pdf"
+    },
+    {
+      "title": "דגם 2",
+      "file": "model_2.pdf"
+    },
+    {
+      "title": "דגם 3",
+      "file": "model_3.pdf"
+    },
+    {
+      "title": "דגם 4",
+      "file": "model_4.pdf"
+    },
+    {
+      "title": "דגם 5",
+      "file": "model_5.pdf"
+    },
+    {
+      "title": "דגם 6",
+      "file": "model_6.pdf"
+    },
+    {
+      "title": "דגם 7",
+      "file": "model_7.pdf"
+    },
+    {
+      "title": "דגם 8",
+      "file": "model_8.pdf"
+    },
+    {
+      "title": "דגם 9",
+      "file": "model_9.pdf"
+    },
+    {
+      "title": "דגם 10",
+      "file": "model_10.pdf"
+    },
+    {
+      "title": "דגם 11",
+      "file": "model_11.pdf"
+    },
+    {
+      "title": "דגם 12",
+      "file": "model_12.pdf"
+    },
+    {
+      "title": "דגם 13",
+      "file": "model_13.pdf"
+    },
+    {
+      "title": "דגם 14",
+      "file": "model_14.pdf"
+    },
+    {
+      "title": "דגם 15",
+      "file": "model_15.pdf"
+    },
+    {
+      "title": "דגם 16",
+      "file": "model_16.pdf"
+    },
+    {
+      "title": "דגם 17",
+      "file": "model_17.pdf"
+    },
+    {
+      "title": "דגם 19",
+      "file": "model_19.pdf"
+    },
+    {
+      "title": "דגם 20",
+      "file": "model_20.pdf"
+    },
+    {
+      "title": "דגם 21",
+      "file": "model_21.pdf"
+    },
+    {
+      "title": "דגם 22",
+      "file": "model_22.pdf"
+    },
+    {
+      "title": "דגם 23",
+      "file": "model_23.pdf"
+    },
+    {
+      "title": "דגם 25",
+      "file": "model_25.pdf"
+    },
+    {
+      "title": "דגם 26",
+      "file": "model_26.pdf"
+    },
+    {
+      "title": "דגם 27",
+      "file": "model_27.pdf"
+    },
+    {
+      "title": "דגם 28",
+      "file": "model_28.pdf"
+    },
+    {
+      "title": "דגם 29",
+      "file": "model_29.pdf"
+    },
+    {
+      "title": "דגם 30",
+      "file": "model_30.pdf"
+    },
+    {
+      "title": "אדנית עץ מלבנית",
+      "file": "adv1_instructions.pdf"
+    },
+    {
+      "title": "ארגז אחסון מעץ",
+      "file": "adv2_instructions.pdf"
+    },
+    {
+      "title": "כיסא מרובע עם משענת",
+      "file": "adv3_instructions.pdf"
+    },
+    {
+      "title": "מעמד עציצים מדורג",
+      "file": "adv4_instructions.pdf"
+    },
+    {
+      "title": "ספסל / שידת נעליים",
+      "file": "adv5_instructions.pdf"
+    },
+    {
+      "title": "שרפרף מרובע נמוך",
+      "file": "adv6_instructions.pdf"
+    }
   ]
 }
